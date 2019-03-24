@@ -1,0 +1,43 @@
+footer {
+    background-color: $main_color;
+    
+    address ul li {
+        list-style-type: none;
+        margin: 1.2em;
+        font-size: 1rem;
+        color: white;
+        font-family: 'Alegreya Sans', sans-serif;
+        padding-inline-start: 0;
+        list-style: none;
+
+        a {
+            color: white;
+        }
+    }
+
+    img {
+        height: 4em;
+        display: block;
+        margin: 0 auto;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+
+        @include tablet {
+            display: inline;
+            margin: 1em;
+        }
+        @include desktop {
+            margin: 2.5em;
+        }
+    }
+    .contact {
+        margin: 0 auto;
+        text-align: center;
+
+        @include tablet {
+            text-align: left;
+            padding-left: 50px; 
+        }
+        
+    }
+}

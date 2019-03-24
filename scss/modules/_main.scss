@@ -1,0 +1,118 @@
+.carousel-item {
+    img {
+    height: 100vh;
+    width: 100vw;
+    }
+    @include tablet {
+        height: 70vh;   
+    }
+    @include desktop {
+        height: 80vh;   
+    }
+}
+.image-slide-mobile {
+    position: relative;
+    width: 100%;
+    margin: 0;
+
+    .text-div-products-mobile {
+        position: absolute;
+        top: 10%;
+        width: 100%;
+        @extend %text-div-products;
+
+        h5 {
+            text-align: center;
+        }
+        img {
+            height: auto;
+        }
+        p a {
+            text-decoration: underline;
+            color: $link_color;
+        }
+    }
+}
+%text-div-products {
+    background-color: rgba(32, 34, 43, 0.75);
+    padding: 20px;
+
+    h5 {
+        color: white;
+        font-family: Thasadith;
+        text-decoration-line: underline;
+        margin-top: 10px;
+    }
+    p{
+        color: white;
+        font-size: 1.2em;
+        font-family: Thasadith;
+        margin-bottom: 0;
+    }
+    img {
+        width: 100%;
+    }
+}
+.image-slide-desktop {
+    position: relative;
+    width: 100%;
+    margin: 0;
+
+    .carousel {
+        padding: 0;
+    }
+}
+.overlay-row {
+    position: absolute;
+    top: 15%;
+    left: 0;
+
+    .text-div-products {
+        @extend %text-div-products;
+    }
+    .text-div-index {
+        margin: 0 auto;
+        background-color: rgba(32, 34, 43, 0.75);
+    
+        p{
+            color: white;
+            font-size: 1.2em;
+            font-family: Thasadith;
+            padding: 30px 10px;
+    
+            a {
+                text-decoration: underline;
+                color: $link_color;
+
+                @include tablet {
+                    text-align: center;                
+                }
+            }
+        }  
+    }
+}
+// Styling for arrow button, switching carousel image, in mobile and tablet mode.
+
+%switch-image-btn {
+    position: absolute;
+    top: 72%;
+
+    a span img {
+        height: auto;
+        width: 150px;
+    }
+}
+.next-btn {
+    @extend %switch-image-btn;
+    right: 15%;
+    @include tablet { 
+    right: 11%;
+    }
+}
+.prev-btn {
+    @extend %switch-image-btn;
+    left: 10%;
+    @include tablet { 
+    left: 28%;
+    }
+}
